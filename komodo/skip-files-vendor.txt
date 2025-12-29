@@ -23,7 +23,6 @@ bin/cksum
 bin/clear
 bin/cmp
 bin/comm
-bin/copy_efs_files_to_data
 bin/cp
 bin/cpio
 bin/cut
@@ -38,24 +37,7 @@ bin/dmesg
 bin/dos2unix
 bin/du
 bin/dump.f2fs
-bin/dump/dump_aoc
-bin/dump/dump_devfreq
-bin/dump/dump_display_logbuffer
-bin/dump/dump_exynos_display
-bin/dump/dump_fingerprint
 bin/dump/dump_modem
-bin/dump/dump_modemlog
-bin/dump/dump_pcie.sh
-bin/dump/dump_perf
-bin/dump/dump_pixel_metrics
-bin/dump/dump_power
-bin/dump/dump_sensors
-bin/dump/dump_soc
-bin/dump/dump_storage
-bin/dump/dump_thermal.sh
-bin/dump/dump_touch.sh
-bin/dump/dump_trusty.sh
-bin/dump_touch/predump_gti0.sh
 bin/dumpsys
 bin/echo
 bin/egrep
@@ -92,13 +74,11 @@ bin/head
 bin/hostname
 bin/hw/android.hardware.boot-service.default-pixel
 bin/hw/android.hardware.drm-service.clearkey
-bin/hw/android.hardware.dumpstate-service
 bin/hw/android.hardware.gatekeeper-service.trusty
 bin/hw/android.hardware.health-service.zumapro
 bin/hw/android.hardware.health.storage-service.default
 bin/hw/android.hardware.nfc-service.st
 bin/hw/android.hardware.power-service.pixel-libperfmgr
-bin/hw/android.hardware.power.stats-service.pixel
 bin/hw/android.hardware.secure_element-service.thales
 bin/hw/android.hardware.security.keymint-service.rust.trusty
 bin/hw/android.hardware.security.secretkeeper.trusty
@@ -107,7 +87,6 @@ bin/hw/android.hardware.thermal-service.pixel
 bin/hw/android.hardware.usb-service
 bin/hw/android.hardware.usb.gadget-service
 bin/hw/android.hardware.wifi-service
-bin/hw/disable_contaminant_detection.sh
 bin/hw/hostapd
 bin/hw/wpa_supplicant
 bin/hwclock
@@ -121,7 +100,6 @@ bin/id
 bin/ifconfig
 bin/inotifyd
 bin/insmod
-bin/insmod.sh
 bin/install
 bin/ionice
 bin/iorenice
@@ -170,7 +148,6 @@ bin/pgrep
 bin/pidof
 bin/pkill
 bin/pmap
-bin/predump_touch.sh
 bin/printenv
 bin/printf
 bin/ps
@@ -226,7 +203,6 @@ bin/timeout
 bin/toolbox
 bin/top
 bin/touch
-bin/touch_gti_ical
 bin/toybox_vendor
 bin/tr
 bin/true
@@ -267,59 +243,16 @@ etc/aconfig/flag.map
 etc/aconfig/flag.val
 etc/aconfig/package.map
 etc/aconfig_flags.pb
-etc/aidl/le_audio/aidl_audio_set_configurations.json
-etc/aidl/le_audio/aidl_audio_set_scenarios.json
-etc/aoc/BLUETOOTH.dat
-etc/aoc/HANDSET.dat
-etc/aoc/HANDSFREE.dat
-etc/aoc/HEADSET.dat
-etc/aoc/downlink_bluetooth_headset_config.pb
-etc/aoc/downlink_dock_config.pb
-etc/aoc/downlink_external_speaker_config.pb
-etc/aoc/downlink_handset_config.pb
-etc/aoc/downlink_speaker_config.pb
-etc/aoc/downlink_wired_headset_config.pb
-etc/aoc/mcps.dat
-etc/aoc/recording.gatf
-etc/aoc/smartfeature.gstf
-etc/aoc/uplink_bluetooth_headset_aec_off_config.pb
-etc/aoc/uplink_bluetooth_headset_aec_on_config.pb
-etc/aoc/uplink_dock_aec_off_config.pb
-etc/aoc/uplink_dock_aec_on_config.pb
-etc/aoc/uplink_external_speaker_aec_off_config.pb
-etc/aoc/uplink_external_speaker_aec_on_config.pb
-etc/aoc/uplink_handset_aec_off_config.pb
-etc/aoc/uplink_handset_aec_on_config.pb
-etc/aoc/uplink_speaker_aec_off_config.pb
-etc/aoc/uplink_speaker_aec_on_config.pb
-etc/aoc/uplink_wired_headset_aec_off_config.pb
-etc/aoc/uplink_wired_headset_aec_on_config.pb
 etc/atrace/atrace_categories.txt
-etc/audio_platform_configuration.xml
-etc/audio_policy_volumes.xml
-etc/bluetooth/bt_vendor_overlay.conf
-etc/bluetooth_power_limits.csv
-etc/bluetooth_power_limits_CA.csv
-etc/bluetooth_power_limits_EU.csv
-etc/bluetooth_power_limits_JP.csv
-etc/bluetooth_power_limits_US.csv
-etc/bm_config.json
 etc/boringssl_self_test.no_zygote.rc
 etc/boringssl_self_test.zygote32.rc
 etc/boringssl_self_test.zygote64.rc
 etc/boringssl_self_test.zygote64_32.rc
 etc/bpf/filterPowerSupplyEvents.o
 etc/build_flags.json
-etc/compens_spk_l.conf
-etc/compens_spk_r.conf
-etc/default_mic_compensation.bin
 etc/default_volume_tables.xml
 etc/fs_config_dirs
 etc/fs_config_files
-etc/fstab.efs
-etc/fstab.efs.from_data
-etc/fstab.modem
-etc/fstab.persist
 etc/fstab.zram.2g
 etc/fstab.zram.3g
 etc/fstab.zram.40p
@@ -334,16 +267,12 @@ etc/fstab.zuma
 etc/fstab.zuma-fips
 etc/fstab.zumapro
 etc/fstab.zumapro-fips
-etc/gnss/gps.cfg
 etc/group
-etc/init.common.cfg
 etc/init/android.hardware.boot-service.default-pixel.rc
 etc/init/android.hardware.drm-service.clearkey.rc
-etc/init/android.hardware.dumpstate-service.rc
 etc/init/android.hardware.gatekeeper-service.trusty.rc
 etc/init/android.hardware.health-service.zumapro.rc
 etc/init/android.hardware.power-service.pixel-libperfmgr.rc
-etc/init/android.hardware.power.stats-service.pixel.rc
 etc/init/android.hardware.secure_element_gto.rc
 etc/init/android.hardware.security.keymint-service.rust.trusty.rc
 etc/init/android.hardware.security.secretkeeper.trusty.rc
@@ -355,65 +284,19 @@ etc/init/android.hardware.wifi-service.rc
 etc/init/android.hardware.wifi.supplicant-service.rc
 etc/init/atrace_categories.rc
 etc/init/boringssl_self_test.rc
-etc/init/dump_power.rc
 etc/init/gpu_probe.rc
 etc/init/health-storage-default.rc
 etc/init/hostapd.android.rc
 etc/init/hw/init.efs.rc
-etc/init/hw/init.komodo.rc
-etc/init/hw/init.persist.rc
 etc/init/hw/init.zuma.soc.rc
-etc/init/hw/init.zumapro.board.rc
-etc/init/hw/init.zumapro.soc.rc
-etc/init/hw/init.zumapro.usb.rc
-etc/init/init.aoc.rc
-etc/init/init.display_logbuffer.rc
-etc/init/init.fingerprint.dump.rc
-etc/init/init.module.rc
-etc/init/init.pixel-mm-gs.rc
-etc/init/init.pixel-perf.rc
 etc/init/init.pixel.rc
-etc/init/init.power-gs.rc
-etc/init/init.storage.rc
-etc/init/init.touch.gti0.rc
-etc/init/init.touch.predump.rc
-etc/init/libg3a_gabc.rc
-etc/init/libg3a_gaf.rc
-etc/init/libg3a_ghawb.rc
 etc/init/nfc-service-default.rc
 etc/init/pixel-mm-gki.rc
 etc/init/pixel-thermal-symlinks.rc
 etc/init/rebalance_interrupts-vendor.gs101.rc
 etc/init/vndservicemanager.rc
-etc/le_audio_codec_capabilities.xml
-etc/libg3a_standalone_gabc_rc
-etc/libg3a_standalone_gaf_rc
-etc/libg3a_standalone_ghawb_rc
-etc/libnfc-hal-st.conf
-etc/libse-gto-hal.conf
 etc/linker.config.pb
-etc/media_codecs.xml
-etc/media_codecs_c2.xml
-etc/media_codecs_performance.xml
-etc/media_codecs_performance_c2.xml
-etc/mixer_paths_aidl.xml
 etc/mkshrc
-etc/modem/Pixel_stability.cfg
-etc/modem/Pixel_stability.nprf
-etc/modem/camera_front_mipi_coex_table.csv
-etc/modem/camera_rear_main_dbr_coex_table.csv
-etc/modem/camera_rear_main_mipi_coex_table.csv
-etc/modem/camera_rear_tele_mipi_coex_table.csv
-etc/modem/camera_rear_wide_mipi_coex_table.csv
-etc/modem/default.cfg
-etc/modem/default.nprf
-etc/modem/default_metrics.xml
-etc/modem/display_primary_mipi_coex_table.csv
-etc/modem/display_primary_ssc_coex_table.csv
-etc/modem/extensive_logging.conf
-etc/modem/logging.conf
-etc/modem_ml_models.conf
-etc/modem_ml_tflite_models.conf
 etc/passwd
 etc/permissions/android.hardware.audio.low_latency.xml
 etc/permissions/android.hardware.audio.pro.xml
@@ -470,9 +353,6 @@ etc/permissions/aosp_excluded_hardware.xml
 etc/permissions/com.nxp.mifare.xml
 etc/permissions/features_com.android.virt.xml
 etc/permissions/handheld_core_hardware.xml
-etc/permissions/vendor.android.hardware.camera.preview-dis.xml
-etc/powerhint-proto.json
-etc/powerhint.json
 etc/selinux/genfs_labels_version.txt
 etc/selinux/plat_pub_versioned.cil
 etc/selinux/plat_sepolicy_vers.txt
@@ -491,37 +371,14 @@ etc/selinux/vendor_sepolicy.cil
 etc/selinux/vendor_service_contexts
 etc/selinux/vendor_tee_service_contexts
 etc/selinux/vndservice_contexts
-etc/spatializer/base
-etc/spatializer/mode_2_ch
-etc/spatializer/mode_6_ch
-etc/spatializer/mode_xaural
 etc/sysconfig/component-overrides.xml
 etc/sysconfig/komodo-component-overrides.xml
-etc/task_profiles.json
-etc/telephony/satellite_access_config.json
-etc/telephony/sats2.dat
-etc/thermal_info_config.json
-etc/thermal_info_config_charge.json
-etc/thermal_info_config_lpm.json
-etc/thermal_info_config_proto.json
-etc/ueventd.rc
-etc/uwb/calibration-CE.conf
-etc/uwb/calibration-FCC.conf
-etc/uwb/calibration-JP.conf
-etc/uwb/calibration-RESTRICTED.conf
-etc/uwb/calibration-TW.conf
-etc/uwb/calibration-default.conf
-etc/uwb/calibration.conf
-etc/uwb/capabilities.conf
-etc/uwb/configuration.conf
 etc/vintf/compatibility_matrix.xml
 etc/vintf/manifest.xml
 etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
-etc/vintf/manifest/android.hardware.dumpstate-service.xml
 etc/vintf/manifest/android.hardware.gatekeeper-service.trusty.xml
 etc/vintf/manifest/android.hardware.health-service.zumapro.xml
 etc/vintf/manifest/android.hardware.power-service.pixel.xml
-etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
 etc/vintf/manifest/android.hardware.secure_element_gto.xml
 etc/vintf/manifest/android.hardware.security.keymint-service.rust.trusty.xml
 etc/vintf/manifest/android.hardware.security.secretkeeper.trusty.xml
@@ -534,23 +391,7 @@ etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 etc/vintf/manifest/health-storage-default.xml
 etc/vintf/manifest/nfc-service-default.xml
-etc/vt_estimation_model.tflite
-etc/vt_prediction_lstm_model.tflite
-etc/waves_config.ini
-etc/waves_preset.mps
-etc/wifi/coex_table.xml
-etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
-etc/wifi/wpa_supplicant_overlay.conf
-firmware/R-cs35l41-dsp1-spk-cali.bin
-firmware/R-cs35l41-dsp1-spk-diag.bin
-firmware/R-cs35l41-dsp1-spk-prot.bin
-firmware/cs35l41-dsp1-spk-cali.bin
-firmware/cs35l41-dsp1-spk-cali.wmfw
-firmware/cs35l41-dsp1-spk-diag.bin
-firmware/cs35l41-dsp1-spk-diag.wmfw
-firmware/cs35l41-dsp1-spk-prot.bin
-firmware/cs35l41-dsp1-spk-prot.wmfw
 lib/modules/acpm_mbox_test.ko
 lib/modules/aoc_alsa_dev.ko
 lib/modules/aoc_channel_dev.ko
@@ -628,7 +469,6 @@ lib64/android.hardware.common-V2-ndk.so
 lib64/android.hardware.common.fmq-V1-ndk.so
 lib64/android.hardware.drm-V1-ndk.so
 lib64/android.hardware.drm.common-V1-ndk.so
-lib64/android.hardware.dumpstate-V1-ndk.so
 lib64/android.hardware.gatekeeper-V1-ndk.so
 lib64/android.hardware.health-V4-ndk.so
 lib64/android.hardware.health.storage-V1-ndk.so
@@ -636,9 +476,7 @@ lib64/android.hardware.nfc-V1-ndk.so
 lib64/android.hardware.power-V1-ndk.so
 lib64/android.hardware.power-V6-ndk.so
 lib64/android.hardware.power.stats-V2-ndk.so
-lib64/android.hardware.power.stats-impl.gs-common.so
 lib64/android.hardware.power.stats-impl.pixel.so
-lib64/android.hardware.power.stats-impl.zumapro.so
 lib64/android.hardware.radio@1.0.so
 lib64/android.hardware.radio@1.1.so
 lib64/android.hardware.secure_element-V1-ndk.so
@@ -690,8 +528,6 @@ lib64/libcrypto.so
 lib64/libcutils.so
 lib64/libdisppower-pixel.so
 lib64/libdmabufheap.so
-lib64/libdump.so
-lib64/libdumpstateutil.so
 lib64/libeffects.so
 lib64/libeffectsconfig.so
 lib64/libenv_filter.dylib.so
@@ -739,10 +575,6 @@ lib64/libxml2.so
 lib64/libz.so
 lib64/mediacas/libclearkeycasplugin.so
 lib64/mediadrm/libdrmclearkeyplugin.so
-lib64/modem_android_property_manager.so
-lib64/modem_android_property_manager_impl.so
-lib64/modem_log_constants.so
-lib64/modem_log_dumper.so
 lib64/nfc_nci.st21nfc.default.so
 lib64/pixel-power-ext-V1-ndk.so
 lib64/pixel_stateresidency_provider_aidl_interface-ndk.so
@@ -878,9 +710,7 @@ lib/modules
 # AIDL audio
 etc/aidl/hfp/hfp_codec_capabilities.xml
 etc/aidl/le_audio/aidl_audio_set_configurations.bfbs
-etc/aidl/le_audio/aidl_audio_set_configurations.json
 etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs
-etc/aidl/le_audio/aidl_audio_set_scenarios.json
 etc/aidl/le_audio/aidl_default_audio_set_configurations.json
 etc/aidl/le_audio/aidl_default_audio_set_scenarios.json
 etc/vintf/manifest/bluetooth_audio.xml
@@ -894,6 +724,7 @@ lib64/android.hidl.safe_union@1.0.so
 lib64/libalsautilsv2.so
 lib64/libbluetooth_audio_session_aidl.so
 lib64/libclang_rt.ubsan_standalone-aarch64-android.so
+lib64/libeffectconfig.so
 lib64/libflatbuffers-cpp.so
 lib64/libhidlmemory.so
 lib64/libmediautils_vendor.so
@@ -918,6 +749,9 @@ lib64/android.hardware.bluetooth-V1-ndk.so
 lib64/android.hardware.bluetooth.finder-V1-ndk.so
 lib64/android.hardware.bluetooth.ranging-V1-ndk.so
 lib64/hardware.google.bluetooth.bt_channel_avoidance@1.0.so
+
+# Camera
+etc/sysconfig/vendor-apex-allowlist-lyric.xml
 
 # Charger
 etc/res/images/charger/battery_fail.png
@@ -960,9 +794,9 @@ lib64/android.hardware.contexthub-V4-ndk.so
 lib64/chre_atoms_log.so
 lib64/chremetrics-cpp.so
 
-# Experiments
-bin/pixel-experiments-recovery.sh
-etc/init/pixel-experiments-recovery.rc
+# Dumpstate
+lib64/android.hardware.dumpstate-V1-ndk.so
+lib64/libdumpstateutil.so
 
 # GPS
 etc/permissions/android.hardware.location.gps.prebuilt.xml
@@ -1004,12 +838,13 @@ lib64/nos_app_keymaster.so
 lib64/nos_app_weaver.so
 lib64/pixelpowerstats_provider_aidl_interface-cpp.so
 
+# Powerstats
+etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
+
 # Radio
 lib64/libnetutils.so
 lib64/libsqlite.so
 lib64/libziparchive.so
-lib64/modem_clock_manager.so
-lib64/modem_clock_manager_impl.so
 
 # Sensors
 lib64/android.frameworks.sensorservice-V1-ndk.so
@@ -1032,7 +867,7 @@ lib64/android.hardware.graphics.allocator@3.0.so
 lib64/android.hardware.graphics.allocator@4.0.so
 lib64/android.hardware.graphics.bufferqueue@1.0.so
 lib64/android.hardware.graphics.bufferqueue@2.0.so
-lib64/android.hardware.graphics.common-V6-ndk.so
+lib64/android.hardware.graphics.common-V7-ndk.so
 lib64/android.hardware.graphics.common@1.0.so
 lib64/android.hardware.graphics.common@1.1.so
 lib64/android.hardware.graphics.common@1.2.so
@@ -1087,10 +922,10 @@ lib64/android.hidl.token@1.0-utils.so
 lib64/android.hidl.token@1.0.so
 lib64/com.google.hardware.pixel.display-V9-ndk.so
 lib64/com.google.hardware.pixel.display-V15-ndk.so
+lib64/com.google.hardware.pixel.display-V16-ndk.so
 lib64/hardware.google.ril_ext-V1-ndk.so
 
 # Misc
-bin/dump/dump_gsc.sh
 lib64/libdrm.so
 lib64/libevent.so
 lib64/libgralloctypes.so
@@ -1100,6 +935,9 @@ lib64/libui.so
 # Odex
 framework/oat/arm64/com.google.android.camera.experimental2024.odex
 framework/oat/arm64/com.google.android.camera.experimental2024.vdex
+
+# Rust
+lib64/libregex_automata.dylib.so
 
 # Completely skip files that are not required
 
