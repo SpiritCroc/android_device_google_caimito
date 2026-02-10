@@ -1,5 +1,7 @@
 #
 # SPDX-FileCopyrightText: 2021 The Android Open-Source Project
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: The Calyx Institute
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -15,6 +17,8 @@ PRODUCT_16K_DEVELOPER_OPTION := true
 endif
 
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/overlay-lineage
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -112,6 +116,10 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
 
 # VINTF
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
